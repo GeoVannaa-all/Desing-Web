@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       texto{
+        background-color: aqua;
+       }      
+    </style>
+</head>
+<body>
+    <span> SPAN 1
+    </span>
+    <p class='texto'> DOM - Modelo de Objetos do documento <span>TEXTO NO SPAN 2</span></p>
+    <p id="paragrsfocomic"></p>
+ 
+<ol>
+    <li>item </li>
+    <li>item</li>
+    <li>item</li>
+</ol>
+<figure>
+    <img src="https://img.elo7.com.br/product/360x360/3240A05/quadro-decorativo-balanco.jpg" alt="">
+</figure>
+ 
+<button class="trocarimagem"> TROCAR imagem</button>
+<script>
+   const pcomid = document.getElementById("paragrafocomid");
+   const pcomclass = document.querySelector(".texto span");
+
+   pcomclass.innerHTML = " <br>TEXTO<br> 2 PARA O SPAN!";
+
+
+  //document.querySelector(".texto span").style.backgoundcolor = "blue";
+   pcomclass.style.backgoundcolor = "blue";
+
+   //pcomclass.classList.add("destaques")
+
+   // a marcação precisa ter uma class para adicionar mais
+   document.querySelector(".texto").classList.add ("destaques");
+
+
+  document.getElementsByTagName("li")[0].style.color = "blue";
+
+  console.log("TOTAL DE LI's"+document.getElementsByTagName("li").length);
+
+  const imagem = document.querySelector("img");
+  console.log(imagem.getAttribute("src"));
+
+
+  const trocarimagem = document.querySelector('.trocarimagem');
+  function trocar{}
+
+document.getElementById("trocarImagem").addEventListener("click", trocarImagem);
+
+const produtos = document.querySelector('ol');
+console.log(produtos.getAttribute('quantidade'));
+console.log(produtos.hasAttribute('quantidade'));
+console.log(produtos.dataset.produtos); //pega o valor que esta em ol data-produtos
+
+console.log(produtos.attributes);
+produtos.removeAttribute("quantidade");
+console.log(produtos.attributes);
+
+const li = document.createElement("li");
+li.textContent = "novo LI";
+li.appendChild(produtos);
+</script>
+
+</body>
+</html>
